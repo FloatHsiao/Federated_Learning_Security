@@ -22,8 +22,11 @@ python FL_Code/FL_CNN_Poison.py
 ```
 ![FL+Poison Accuracy](FL_Result/FL_Poison_Acc.png)
 
-4. 為了防範Poison Attack的危害，我們針對訓練資料，設計了一個投毒偵測模型，該模型透過Autoencoder實作，透過比較輸入跟原型之間的差異，來偵測異常。
+4. 為了防範Poison Attack的危害，我們針對訓練資料，設計了一個投毒偵測模型，該模型透過Autoencoder實作，透過比較輸入跟輸出之間的差異，來偵測異常。若是被投讀過的資料，其輸入輸出之間差異應該會較大，依此來判斷中毒的資料。
 ```
-python FL_Code/FL_CNN_Poison.py
+python FL_Code/Poison_Denfense.py
 ```
-![FL+Poison Accuracy](FL_Result/FL_Poison_Acc.png)
+![FL+Poison Accuracy](FL_Result/Poison_Defense_Acc.png)
+![FL+Poison Accuracy](FL_Result/Poison_Defense_Distribution.png)
+![FL+Poison Accuracy](FL_Result/Poison_Defense_ROC_Curve.png)
+![FL+Poison Accuracy](FL_Result/Poison_Defense_Confusion_Matrix.png)
